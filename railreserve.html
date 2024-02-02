@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WANDERERS RAIL</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #f2f2f2;
+		}
+		
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			text-align: center;
+			padding: 50px;
+		}
+		
+		h1 {
+			font-size: 48px;
+			margin-bottom: 20px;
+		}
+		
+		p {
+			font-size: 24px;
+			margin-bottom: 40px;
+		}
+		
+		button {
+			background-color: #3498db;
+			color: #fff;
+			padding: 15px 30px;
+			border: none;
+			border-radius: 5px;
+			font-size: 20px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		
+		button:hover {
+			background-color: #2980b9;
+		}
+		
+		.train-images {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 40px;
+		}
+		
+		.train-images img {
+			width: 200px;
+			height: 200px;
+			margin-right: 20px;
+			object-fit: cover;
+			border-radius: 10px;
+			box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+		}
+	</style>
+</head>
+<body style="background-image:url('trainbg.jpg');background-size:cover">
+	<div class="container">
+		<h1>Welcome to Wanderes Rail</h1>
+		<p>HELLO, <span id="username"></span>! ,KINDLY CLICK THE BUTTON TO START YOUR RESERVATION</p>
+		<div class="train-images">
+			<img src="train1.jpg" alt="Train 1">
+			<img src="train2.jpg" alt="Train 2">
+			<img src="train3.jpg" alt="Train 3">
+		</div>
+		<a href="bookrail.html"><button>Get Started</button></a>
+	</div>
+	
+	<script>
+		const username = prompt("Please enter your name:");
+		document.getElementById("username").textContent = username;
+	</script>
+</body>
+</html>

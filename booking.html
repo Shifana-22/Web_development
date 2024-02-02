@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Booking Page</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #f2f2f2;
+		}
+		
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			text-align: center;
+			padding: 50px;
+		}
+		
+		h1 {
+			font-size: 48px;
+			margin-bottom: 20px;
+		}
+		
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: #fff;
+			padding: 40px;
+			border-radius: 10px;
+			box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+		}
+		
+		input, select {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+			font-size: 16px;
+		}
+		
+		select {
+			appearance: none;
+			background: url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-512.png") no-repeat right center;
+			background-size: 15px;
+			padding-right: 25px;
+		}
+		
+		input[type="submit"] {
+			background-color: #3498db;
+			color: #fff;
+			padding: 15px 30px;
+			border: none;
+			border-radius: 5px;
+			font-size: 20px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		
+		input[type="submit"]:hover {
+			background-color: #2980b9;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Book your Train Journey</h1>
+		<form action="railbookconfirm.php" method="POST">
+			<label for="travel-date">Travel Date:</label>
+			<input type="date" id="travel-date" name="travel-date" required>
+			
+			<label for="departure-city">Departure City:</label>
+			<select id="departure-city" name="departure-city" required>
+				<option value="">-- Select City --</option>
+				<option value="Delhi">Delhi</option>
+				<option value="Mumbai">Mumbai</option>
+				<option value="Kolkata">Kolkata</option>
+				<option value="Chennai">Chennai</option>
+			</select>
+			
+			<label for="arrival-city">Arrival City:</label>
+			<select id="arrival-city" name="arrival-city" required>
+				<option value="">-- Select City --</option>
+				<option value="Delhi">Delhi</option>
+				<option value="Mumbai">Mumbai</option>
+				<option value="Kolkata">Kolkata</option>
+				<option value="Chennai">Chennai</option>
+			</select>
+			
+			<label for="class-type">Class type:</label>
+			<select id="class-type" name="class-type" required>
+				<option value="">-- Select Class type --</option>
+				<option value="1AC">1AC FIRST CLASS</option>
+				<option value="2AC">2AC SECOND CLASS</option>
+				<option value="3AC">3AC THIRD CLASS</option>
+				<option value="FC">FIRST CLASS</option>
+				<option value="SL">SLEEPER CLASS</option>
+				<option value="2S">SECOND CLASS</option>
+			</select>
+			<input type="submit" value="REGISTER">
+</form>
+</body>
+</html>

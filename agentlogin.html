@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+      #form1 {
+        color: blanchedalmond;
+        font-family: Century Gothic;
+      }
+      
+      
+      #btn{
+			background-color: skyblue;
+			color: #fff;
+			padding: 15px 30px;
+			border: none;
+			border-radius: 5px;
+			font-size: 20px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		#btn:hover {
+			background-color: paleturquoise;
+		}
+    </style>
+  </head>
+  <body style="background-image:url('loginrail.jpg');background-size:cover">
+    <h1>Enter Your Details</h1>
+    <form id="form1" action="agentbook.php" method="post" onsubmit="return validform()">
+      <table>
+        <tr>
+          <td>Enter Agent ID:</td>
+          <td><input type="text" name="agent_id"></td>
+        </tr>
+        <tr>
+          <td>Enter Password:</td>
+          <td><input type="password" name="password"></td>
+          <td id="elmPasswordError" class="errorMsg">&nbsp;</td>
+        </tr>
+       
+      </table>
+      <input type="submit" value="Login" id="btn">
+    </form>
+    <script>
+      function validform()
+      {
+        let is_pass=/^[A-Za-z]{4}[0-9!@#$%^&*()-_+=]{4}$/;
+        let passwordInput = document.getElementsByName("password")[0];
+        let password = passwordInput.value.trim();
+
+        if(is_pass.test(password))
+        {     
+          return true;
+        }
+        else 
+        {
+          alert("Password must be of 8 characters with first 4 letters and last 4 numbers or special characters or both.");
+          passwordInput.focus();
+          return false;  
+        }  
+      }
+    </script>
+  </body>
+</html>

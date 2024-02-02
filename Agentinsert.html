@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Agent Form</title>
+</head>
+<body>
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        <label for="agent_id">Agent ID:</label>
+        <input type="text" name="agent_id" required>
+
+        <label for="agent_name">Agent Name:</label>
+        <input type="text" name="agent_name" required>
+
+        <label for="state_name">State Name:</label>
+        <input type="text" name="state_name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

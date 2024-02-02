@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Booking Page</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #f2f2f2;
+		}
+		
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			text-align: center;
+			padding: 50px;
+		}
+		
+		h1 {
+			font-size: 48px;
+			margin-bottom: 20px;
+		}
+		
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: #fff;
+			padding: 40px;
+			border-radius: 10px;
+			box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+		}
+		
+		input, select {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+			font-size: 16px;
+		}
+		
+		select {
+			appearance: none;
+			background: url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-512.png") no-repeat right center;
+			background-size: 15px;
+			padding-right: 25px;
+		}
+		
+		input[type="submit"] {
+			background-color: #3498db;
+			color: #fff;
+			padding: 15px 30px;
+			border: none;
+			border-radius: 5px;
+			font-size: 20px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		
+		input[type="submit"]:hover {
+			background-color: #2980b9;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Pay for your Train Journey</h1>
+		<form action="railbookconfirm.php" method="POST">
+			
+			
+			<label for="pay_method">Mode of payment:</label>
+			<select id="pay_method" name="pay_method" required>
+				<option value="">-- Select pay method --</option>
+				<option value="Credit">Credit card</option>
+				<option value="Debit">Debit card</option>
+				<option value="UPI_ID">UPI ID</option>
+			</select>
+			
+            <div>
+                <a href="credit.html"><button>CREDIT</button></a>
+            </div>
+            <div>
+                <a href="debit.html"><button>DEBIT</button></a>
+            </div>
+            <div>
+                <a href="upi.html"><button>UPI_ID</button></a>
+            </div>
+			
+			<input type="submit" value="PAY">
+</form>
+</body>
+</html>
